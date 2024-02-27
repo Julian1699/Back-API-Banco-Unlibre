@@ -97,6 +97,8 @@ El sistema brinda soporte completo para la generación de reportes en formatos P
 
 ## http://localhost:8080/api/v1/reports/clientes-cuentas/export/pdf/{clienteCedula}
 
+Ejemplo, reporte en PDF generado:
+
  ![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/45e5565c-8a79-4ccb-be36-4e188dd1c01d)
 
 ### Descripción Adicional
