@@ -80,12 +80,17 @@ Ejemplo para la creación de cuenta:
 El sistema brinda soporte completo para la generación de reportes en formatos PDF y Excel, permitiendo a los usuarios descargar documentos detallados que abarcan desde información general de cuentas hasta transacciones financieras específicas. Los siguientes endpoints están disponibles para la generación de estos reportes:
 
 # Exportaciones en Excel
+
 •	Generar Reporte de Clientes en Excel: Proporciona un resumen de todos los clientes registrados en el sistema.
+
 •	Método y Ruta: GET /api/v1/cliente/export/excel
+
 •	Generar Reporte de Clientes y Cuentas en Excel: Ofrece una vista combinada de clientes y sus cuentas asociadas, ideal para análisis financiero y administrativo.
+
 •	Método y Ruta: GET /api/v1/cliente/clientes-cuentas/export/excel
 
 # Exportaciones en PDF
+
 •	Certificado de Cuenta en PDF: Genera un certificado detallado para una cuenta específica, incluyendo información crítica como el tipo de cuenta, número de cuenta, fecha de apertura, estado actual y saldo disponible. Este documento es crucial para propósitos de verificación y auditoría.
 
 ## Endpoint para generar certificado PDF de cuenta de ahorros.
