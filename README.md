@@ -98,7 +98,7 @@ El sistema brinda soporte completo para la generación de reportes en formatos P
 
 Ejemplo, reporte en PDF generado:
 
-![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/3f1d416d-cd91-4bda-9e6f-caddd508df60)
+![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/61beeb20-cfdc-4d79-a6ae-75b516540870)
 
 # Exportaciones en Excel
 
