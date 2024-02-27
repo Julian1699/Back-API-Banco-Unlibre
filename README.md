@@ -28,7 +28,7 @@ Para realizar un registro eficaz, es necesario que el cliente proporcione la sig
   
 ## Endpoint para realizar el registro
 
-# http://localhost:8080/api/v1/cliente/post
+## http://localhost:8080/api/v1/cliente/post
 
 Ejemplo de solicitud de registro:
 
@@ -48,7 +48,7 @@ Ejemplo de solicitud de registro:
 ```
 ## Endpoint para realizar el login 
 
-# http://localhost:8080/api/v1/auth/login
+## http://localhost:8080/api/v1/auth/login
 
 Ejemplo de solicitud de login:
 
@@ -65,7 +65,7 @@ La creación de una nueva cuenta se realiza a través del endpoint /api/v1/cuent
 
 ## Endpoint para crear una cuenta de ahorro 
 
-# http://localhost:8080/api/v1/cuenta/post
+## http://localhost:8080/api/v1/cuenta/post
 
 Ejemplo para la creación de cuenta:
 
