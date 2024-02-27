@@ -44,17 +44,23 @@ Ejemplo de solicitud de registro:
 
 Ejemplo de solicitud de login:
 
-jsonCode
+```json
 { "username": "ricardo.milos@gmail.com", "password": "customer" } 
-Roles y Autorización con Spring Security
+
+### Roles y Autorización con Spring Security
+
 El sistema establece dos roles principales: ADMIN y CUSTOMER. Mientras el ADMIN goza de plenos derechos CRUD sobre clientes y cuentas, el CUSTOMER puede realizar operaciones de consulta y registro, evidenciando una clara administración de responsabilidades y acceso.
 GESTIÓN DE CUENTAS
 Creación y Administración
 La creación de una nueva cuenta se realiza a través del endpoint /api/v1/cuenta/post, lo cual crea una nueva cuenta digital y a su vez genera un número de cuenta de 11 dígitos y permite el registro de una clave de seguridad de 4 dígitos.
+
 Ejemplo para la creación de cuenta:
-jsonCode
-{ "clienteId": 1, "tipoCuenta": "AHORROS", "claveSeguridad": "1234" } 
-REPORTES AVANZADOS
+
+```json
+{ "clienteId": 1, "tipoCuenta": "AHORROS", "claveSeguridad": "1234" }
+
+### REPORTES AVANZADOS
+
 Generación de Reportes
 El sistema brinda soporte completo para la generación de reportes en formatos PDF y Excel, permitiendo a los usuarios descargar documentos detallados que abarcan desde información general de cuentas hasta transacciones financieras específicas. Los siguientes endpoints están disponibles para la generación de estos reportes:
 Exportaciones en Excel
