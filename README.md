@@ -25,6 +25,10 @@ Para realizar un registro eficaz, es necesario que el cliente proporcione la sig
 - Ciudad de residencia
 - Actividad económica: profesión
 - Tipo de trabajo (Empleado, Independiente)
+  
+## Endpoint para realizar el registro
+
+# http://localhost:8080/api/v1/cliente/post
 
 Ejemplo de solicitud de registro:
 
@@ -42,6 +46,9 @@ Ejemplo de solicitud de registro:
   "tipoTrabajo": "Empleado"
 }
 ```
+## Endpoint para realizar el login 
+
+# http://localhost:8080/api/v1/auth/login
 
 Ejemplo de solicitud de login:
 
@@ -55,6 +62,10 @@ El sistema establece dos roles principales: ADMIN y CUSTOMER. Mientras el ADMIN 
 GESTIÓN DE CUENTAS
 Creación y Administración
 La creación de una nueva cuenta se realiza a través del endpoint /api/v1/cuenta/post, lo cual crea una nueva cuenta digital y a su vez genera un número de cuenta de 11 dígitos y permite el registro de una clave de seguridad de 4 dígitos.
+
+## Endpoint para crear una cuenta de ahorro 
+
+# http://localhost:8080/api/v1/cuenta/post
 
 Ejemplo para la creación de cuenta:
 
