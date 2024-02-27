@@ -40,7 +40,8 @@ Ejemplo de solicitud de registro:
   "actividadEconomica": "Ingeniero de Sistemas",
   "profesion": "Ingeniero",
   "tipoTrabajo": "Empleado"
-}```
+}
+```
 
 Ejemplo de solicitud de login:
 
@@ -59,6 +60,7 @@ Ejemplo para la creación de cuenta:
 
 ```json
 { "clienteId": 1, "tipoCuenta": "AHORROS", "claveSeguridad": "1234" }
+```
 
 ### REPORTES AVANZADOS
 
@@ -75,10 +77,12 @@ Exportaciones en PDF
 
  ![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/45e5565c-8a79-4ccb-be36-4e188dd1c01d)
 
-Descripción Adicional
+### Descripción Adicional
 Cada uno de estos endpoints ha sido diseñado con la flexibilidad y precisión necesarias para satisfacer diversas necesidades de informes financieros, desde la generación de reportes generales de todos los clientes hasta informes detallados de cuentas individuales, asegurando que la información relevante esté disponible de manera eficiente y segura.
-TECNOLOGÍA Y SEGURIDAD
+
+### TECNOLOGÍA Y SEGURIDAD
 El sistema está construido sobre Spring Boot, aprovechando la robustez de Spring Security y JWT para garantizar la seguridad. La generación de reportes se realiza mediante JasperReports, facilitando una presentación detallada y profesional de los datos financieros.
-CONCLUSIÓN
+
+### CONCLUSIÓN
 Este sistema de gestión de cuentas de ahorro digital representa una solución completa y avanzada, dirigida a modernizar y simplificar las operaciones bancarias tanto para clientes como para administradores. La implementación de tecnologías de vanguardia asegura un alto nivel de seguridad y una experiencia de usuario optimizada, marcando un hito en la gestión financiera digital.
 
