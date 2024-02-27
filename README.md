@@ -98,7 +98,7 @@ El sistema brinda soporte completo para la generación de reportes en formatos P
 
 Ejemplo, reporte en PDF generado:
 
- ![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/45e5565c-8a79-4ccb-be36-4e188dd1c01d)
+![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/3f1d416d-cd91-4bda-9e6f-caddd508df60)
 
 # Exportaciones en Excel
 
@@ -106,16 +106,23 @@ Ejemplo, reporte en PDF generado:
 
 •	Método y Ruta: GET /api/v1/cliente/export/excel
 
+![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/ed57204c-f3e1-4586-8352-360d672320d7)
+
 •	Generar Reporte de Clientes y Cuentas en Excel: Ofrece una vista combinada de clientes y sus cuentas asociadas, ideal para análisis financiero y administrativo.
 
 •	Método y Ruta: GET /api/v1/cliente/clientes-cuentas/export/excel
 
+![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/0e810a84-c498-4476-8dfd-b7e25021179d)
+
 ### Descripción Adicional
+
 Cada uno de estos endpoints ha sido diseñado con la flexibilidad y precisión necesarias para satisfacer diversas necesidades de informes financieros, desde la generación de reportes generales de todos los clientes hasta informes detallados de cuentas individuales, asegurando que la información relevante esté disponible de manera eficiente y segura.
 
 ### TECNOLOGÍA Y SEGURIDAD
+
 El sistema está construido sobre Spring Boot, aprovechando la robustez de Spring Security y JWT para garantizar la seguridad. La generación de reportes se realiza mediante JasperReports, facilitando una presentación detallada y profesional de los datos financieros.
 
 ### CONCLUSIÓN
+
 Este sistema de gestión de cuentas de ahorro digital representa una solución completa y avanzada, dirigida a modernizar y simplificar las operaciones bancarias tanto para clientes como para administradores. La implementación de tecnologías de vanguardia asegura un alto nivel de seguridad y una experiencia de usuario optimizada, marcando un hito en la gestión financiera digital.
 
