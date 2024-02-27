@@ -40,12 +40,13 @@ Ejemplo de solicitud de registro:
   "actividadEconomica": "Ingeniero de Sistemas",
   "profesion": "Ingeniero",
   "tipoTrabajo": "Empleado"
-}
+}```
 
 Ejemplo de solicitud de login:
 
 ```json
-{ "username": "ricardo.milos@gmail.com", "password": "customer" } 
+{ "username": "ricardo.milos@gmail.com", "password": "customer" }
+```
 
 ### Roles y Autorización con Spring Security
 
