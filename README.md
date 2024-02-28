@@ -58,6 +58,10 @@ Ejemplo de solicitud de login:
   "password": "customer"
 }
 ```
+## Una vez se hace login con las credenciales correctas se genera un Bearer Token que debe ser utilizado para acceder a todos los demas ENDPOINTS de la API
+
+![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/cb6eea05-652b-4fd8-9a7e-6bfb6a4a2234)
+
 ### Roles y Autorización con Spring Security
 
 El sistema establece dos roles principales: ADMIN y CUSTOMER. Mientras el ADMIN goza de plenos derechos CRUD sobre clientes y cuentas, el CUSTOMER puede realizar operaciones de consulta y registro, evidenciando una clara administración de responsabilidades y acceso.
