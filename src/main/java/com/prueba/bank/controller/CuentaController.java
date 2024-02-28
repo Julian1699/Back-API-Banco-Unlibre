@@ -16,6 +16,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
@@ -37,6 +39,9 @@ public class CuentaController {
 
     @Autowired
     private final CuentaService cuentaService;
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @Secured("ROLE_ADMIN")
     @Operation(
             summary = "Obtener todas las cuentas",
             description = "Devuelve una lista de todas las cuentas disponibles en la base de datos.",
@@ -77,6 +82,9 @@ public class CuentaController {
             return new ResponseEntity<>("Error al guardar la cuenta: " + e.getMessage(), HttpStatus.BAD_REQUEST);
         }
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @Secured("ROLE_ADMIN")
     @Operation(
             summary = "Actualizar una cuenta existente",
             description = "Actualiza los detalles de una cuenta existente en la base de datos.",
@@ -95,6 +103,9 @@ public class CuentaController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cuenta no encontrada con ID: " + id);
         }
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @Secured("ROLE_ADMIN")
     @Operation(
             summary = "Eliminar una cuenta existente",
             description = "Elimina una cuenta existente en la base de datos. Este proceso es irreversible y debe usarse con precaución.",
@@ -113,6 +124,9 @@ public class CuentaController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Cuenta no encontrada con ID: " + id);
         }
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @Secured("ROLE_ADMIN")
     @Operation(
             summary = "Obtener una cuenta existente por su ID",
             description = "Recupera los detalles de una cuenta específica en la base de datos utilizando su identificador único (ID). Este endpoint es útil para obtener información detallada de una cuenta individual.",
@@ -131,6 +145,9 @@ public class CuentaController {
             return new ResponseEntity<>(Message.COUNT_NOT_FOUND, HttpStatus.NOT_FOUND);
         }
     }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @Secured("ROLE_ADMIN")
     @Operation(
             summary = "Buscar cuentas por número o características asociadas",
             description = "Este endpoint permite buscar cuentas utilizando un término de búsqueda que puede coincidir con cualquier parte del número de cuenta o detalles asociados, facilitando la localización de cuentas específicas dentro del sistema.",

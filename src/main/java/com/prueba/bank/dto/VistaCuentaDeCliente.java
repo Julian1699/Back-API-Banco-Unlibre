@@ -7,7 +7,7 @@ public interface VistaCuentaDeCliente {
     String getNumeroTelefonico();
     String getNumeroCuenta();
     String getTipoCuenta(); // Enum como String
-    String getEstadoCuenta(); // Retorna el estado de la cuenta como String
+    String getEstadoCuenta();
     double getSaldo();
-    Date getFechaCreacion(); // O String, dependiendo de cómo quieras formatear la fecha
+    Date getFechaCreacion();
 }

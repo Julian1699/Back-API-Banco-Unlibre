@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -29,7 +28,7 @@ public class CuentaService {
     private final ClienteRepository clienteRepository;
 
     @Autowired
-    private final BCryptPasswordEncoder passwordEncoder; // Asegúrate de tener un constructor o @Autowired para esto
+    private final BCryptPasswordEncoder passwordEncoder;
 
     public Cuenta addCuenta(Long clienteId, TipoCuenta tipoCuenta, String claveSeguridad) {
         Cliente cliente = clienteRepository.findById(clienteId)
@@ -38,40 +37,13 @@ public class CuentaService {
         Cuenta cuenta = new Cuenta();
         cuenta.setCliente(cliente);
         cuenta.setNumeroCuenta(generarNumeroCuenta());
-        cuenta.setClaveSeguridad(passwordEncoder.encode(claveSeguridad)); // Encriptar la clave proporcionada
+        cuenta.setClaveSeguridad(passwordEncoder.encode(claveSeguridad));
         cuenta.setEstadoCuenta(EstadoCuenta.ACTIVA);
         cuenta.setSaldo(0.0);
         cuenta.setTipoCuenta(tipoCuenta);
 
         return cuentaRepository.save(cuenta);
     }
-/*
-    public Cuenta addCuenta(Long clienteId, TipoCuenta tipoCuenta) {
-        Cliente cliente = clienteRepository.findById(clienteId)
-                .orElseThrow(() -> new EntityNotFoundException("Cliente not found with id: " + clienteId));
-
-        Cuenta cuenta = new Cuenta();
-        cuenta.setCliente(cliente);
-        cuenta.setNumeroCuenta(generarNumeroCuenta());
-        cuenta.setClaveSeguridad(generarClaveSeguridad());
-        cuenta.setEstadoCuenta(EstadoCuenta.ACTIVA); // Ajustado para usar el enumerado EstadoCuenta
-        cuenta.setSaldo(0.0);
-        cuenta.setTipoCuenta(tipoCuenta);
-
-        return cuentaRepository.save(cuenta);
-    }
-    private String generarClaveSeguridad() {
-        Random random = new Random();
-        StringBuilder claveSeguridad = new StringBuilder();
-        for (int i = 0; i < 4; i++) {
-            int digit = random.nextInt(10);
-            claveSeguridad.append(digit);
-        }
-        // Encriptar la clave de seguridad antes de retornarla
-        return passwordEncoder.encode(claveSeguridad.toString());
-    }
-
- */
     private String generarNumeroCuenta() {
         Random random = new Random();
         StringBuilder numeroCuenta = new StringBuilder();

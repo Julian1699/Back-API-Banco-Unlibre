@@ -71,7 +71,7 @@ public class ReportController {
             JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(vistaCuentaClientes);
 
             Map<String, Object> parameters = new HashMap<>();
-            // Suponiendo que quieras usar el primer registro para llenar los parámetros del reporte
+
             VistaCuentaDeCliente cliente = vistaCuentaClientes.get(0);
             parameters.put("tipoCuenta", cliente.getTipoCuenta());
             parameters.put("fechaCreacion", cliente.getFechaCreacion());
@@ -80,9 +80,6 @@ public class ReportController {
             parameters.put("nombres", cliente.getNombres());
             parameters.put("cedula", cliente.getCedula());
             parameters.put("estado", cliente.getEstadoCuenta());
-
-            // Agregar la ruta correcta para 'imageDir' si vas a usar imágenes
-            // Parameters.put("imageDir", "classpath:/static/images/");
 
             JasperPrint jasperPrint = JasperFillManager.fillReport(jasperStream, parameters, dataSource);
 

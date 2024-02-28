@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDate;
 
-
 @Entity
 @Data
 @Table(name = "cliente")
@@ -33,9 +32,5 @@ public class Cliente {
     private String profesion;
     @Column(name = "tipo_trabajo")
     private String tipoTrabajo;
-    /*
-    @OneToOne(mappedBy = "cliente", cascade = CascadeType.ALL)
-    private User user;
-    */
 
 }
