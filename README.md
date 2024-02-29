@@ -1,11 +1,11 @@
-# DOCKER
+                           # DOCKER
 
-![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/13283eac-4f12-41a8-a06f-c1db1734373d)
+                           ![image](https://github.com/Julian1699/Back-API-Banco-Unlibre/assets/114323630/13283eac-4f12-41a8-a06f-c1db1734373d)
 
 Como el api se encuentra dockerizada es necesario:
 
 1) Clonar el repositorio especifico de la rama main-dockerized, se puede realizar con la siguiente linea de comandos:
-   - $ git clone -b main-dockerized https://github.com/Julian1699/Api-Rest-For-Learning.git
+   - $ git clone -b dockerized-main https://github.com/Julian1699/Back-API-Banco-Unlibre.git
 2) Una vez clonado el repositorio, se debe abrir una terminal (powershell o git bash) dentro del directorio que contenga el proyecto.
 3) Ejecutar el comando de docker
    - $ docker compose up
